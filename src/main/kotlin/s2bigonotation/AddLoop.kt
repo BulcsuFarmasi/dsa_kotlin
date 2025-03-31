@@ -1,5 +1,7 @@
 package s2bigonotation
 
+import kotlin.time.measureTime
+
 fun addUpTo(n: Int) : Int {
     var total = 0
 
@@ -11,5 +13,7 @@ fun addUpTo(n: Int) : Int {
 }
 
 fun main () {
-    println(addUpTo(9))
+    val duration = measureTime {     addUpTo(1000000000)  }
+
+    println("Time elapsed: ${duration.inWholeMilliseconds / 1000} seconds")
 }
