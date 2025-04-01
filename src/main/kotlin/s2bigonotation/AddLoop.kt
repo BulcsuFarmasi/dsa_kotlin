@@ -13,7 +13,11 @@ fun addUpTo(n: Int) : Int {
 }
 
 fun main () {
-    val duration = measureTime {     addUpTo(1000000000)  }
+    val startTime = System.currentTimeMillis()
 
-    println("Time elapsed: ${duration.inWholeMilliseconds / 1000} seconds")
+    addUpTo(1000000000)
+
+    val endTime = System.currentTimeMillis()
+
+    println("Time elapsed: ${(endTime - startTime) / 1000f} seconds")
 }
