@@ -2,9 +2,10 @@ package s4problemsolvingapproach
 
 fun charCount(str: String): HashMap<Char, Int> {
     // make object to return at end
-    var result: HashMap<Char, Int> = hashMapOf(Pair('B', 1));
+    val result: HashMap<Char, Int> = hashMapOf()
     // loop over string for each character
-    for (char in str) {
+    for (i in str.indices) {
+        val char = str[i].lowercaseChar()
         if (result[char] != null) {
             result[char] = result[char]!! + 1
         } else {
@@ -19,6 +20,6 @@ fun charCount(str: String): HashMap<Char, Int> {
 }
 
 fun main() {
-    println(charCount("Benedek"))
+    println(charCount("Julian McMahon"))
 }
 
